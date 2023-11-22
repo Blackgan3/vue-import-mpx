@@ -1,4 +1,4 @@
-# test-vue-import-mpx
+# vue 使用 Mpx 组件 demo 项目
 
 ## Project setup
 ```
