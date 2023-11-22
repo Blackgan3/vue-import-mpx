@@ -1,9 +1,4 @@
-const MpxWebpackPlugin = require('@mpxjs/webpack-plugin')
-const path = require('path')
-
-function resolve (file) {
-  return path.resolve(__dirname, '..', file || '')
-}
+const MpxWebpackPlugin = require('@mpxjs/webpack-plugin');
 // vue.config.js
 module.exports = {
   configureWebpack: {
@@ -33,7 +28,8 @@ module.exports = {
               loader: 'ts-loader',
               options: {
                 appendTsSuffixTo: [/\.(mpx|vue)$/],
-                allowTsInNodeModules: true
+                allowTsInNodeModules: true,
+                transpileOnly: true
               }
             }
           ]
