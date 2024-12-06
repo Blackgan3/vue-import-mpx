@@ -10,8 +10,10 @@
   "dependencies": {
     "@didi/mpx-ui": "^2.1.34-0",
     "@didi/turbo-ui": "^1.0.1-alpha.19",
-    "@mpxjs/core": "^2.8.47",
+    "@mpxjs/api-proxy": "^2.9.69",
+    "@mpxjs/core": "^2.9.69",
     "@mpxjs/store": "^2.8.15",
+    "@mpxjs/utils": "^2.9.69",
     "@vue/cli-service": "^5.0.8",
     "@vue/vue-loader-v15": "npm:vue-loader@^15.9.7",
     "core-js": "^3.6.5",
@@ -27,7 +29,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.14.5",
-    "@mpxjs/webpack-plugin": "^2.8.35",
+    "@mpxjs/webpack-plugin": "^2.9.69",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "babel-eslint": "^10.1.0",
