@@ -2,9 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueI18n from 'vue-i18n'
+import { createI18n, useI18n } from 'vue-i18n-bridge'
 
 // 注册 VueI18n 插件
-Vue.use(VueI18n)
+Vue.use(VueI18n, { bridge: true })
 
 const messages = {
   zh: {
@@ -31,10 +32,14 @@ const messages = {
   }
 }
 
-const i18n = new VueI18n({
-  locale: 'en',
+const i18n = createI18n({
+  legacy: false,
+  locale: 'zh',
+  fallbackLocale: 'en',
   messages
-})
+}, VueI18n)
+
+Vue.use(i18n)
 
 Vue.config.productionTip = false
 
