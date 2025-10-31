@@ -6,36 +6,17 @@
     </view>
     
     <view class="content">
-      <text class="welcome">{{ $t('hello.welcome', { name: userName }) }}</text>
-      <text class="description">{{ $t('hello.description') }}</text>
-    </view>
-    
-    <view class="actions">
-      <button 
-        class="btn btn-primary" 
-        @click="changeLanguage('zh')"
-        :class="{ active: currentLang === 'zh' }"
-      >
-        中文
-      </button>
-      <button 
-        class="btn btn-primary" 
-        @click="changeLanguage('en')"
-        :class="{ active: currentLang === 'en' }"
-      >
-        English
-      </button>
+\      <text class="description">{{ $t('hello.description') }}</text>
     </view>
     
     <view class="info">
-      <text class="current-lang">{{ $t('hello.currentLang') }}: {{ currentLangName }}</text>
       <text class="timestamp">{{ $t('hello.timestamp') }}: {{ formattedTime }}</text>
     </view>
   </view>
 </template>
 
 <script>
-import { createComponent } from '@mpxjs/core'
+import { createComponent, useI18n } from '@mpxjs/core'
 
 createComponent({
   data() {
@@ -45,7 +26,13 @@ createComponent({
       currentLang: 'zh'
     }
   },
-  
+  setup(props, context) {
+    const { t } = useI18n() // 从返回中解构出 t 方法
+    console.log('ttttt', t)
+    return {
+      t
+    } // 将 t 方法返回挂载到渲染实例
+  },
   computed: {
     currentLangName() {
       return this.currentLang === 'zh' ? '中文' : 'English'
