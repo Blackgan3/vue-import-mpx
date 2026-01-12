@@ -1,6 +1,7 @@
 const MpxWebpackPlugin = require('@mpxjs/webpack-plugin');
 // vue.config.js
 module.exports = {
+  parallel: false,
   configureWebpack: {
     plugins: [
       new MpxWebpackPlugin({
@@ -39,4 +40,3 @@ module.exports = {
   },
   transpileDependencies: ['@mpxjs']
 }
-

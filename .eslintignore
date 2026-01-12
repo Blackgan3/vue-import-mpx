@@ -1,1 +1,3 @@
 src/**
+vue.config.js
+dist/**
